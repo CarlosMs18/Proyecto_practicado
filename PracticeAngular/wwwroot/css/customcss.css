@@ -1,0 +1,24 @@
+﻿body {
+}
+
+.contenedor-totales{
+    display:flex;
+   justify-content : space-around;
+   
+  
+}
+
+
+.accordeon-flex{
+    display : flex;
+    justify-content : space-between;
+}
+
+.activo {
+    color: blue;
+}
+
+.pasivo {
+    color: red;
+}
+

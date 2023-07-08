@@ -2,11 +2,11 @@
 {
     public class IndiceCuentaViewModel
     {
-  //      SELECT c.Id , c.Nombre, c.Balance
-  //FROM Cuentas c
-  //INNER JOIN TiposCuenta tc
-  //ON tc.Id = c.TipoCuentaId
-  //WHERE tc.UsuarioId = @UsuarioId
+        public string TipoCuenta { get; set; }
+
+        public IEnumerable<Cuenta> Cuentas { get; set; }
+
+        public decimal Balance => Cuentas.Sum(x => x.Balance);
 
     }
 }

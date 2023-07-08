@@ -6,10 +6,10 @@ namespace PracticeAngular.Models
     {
 
         public int Id { get; set; }
-
         [Required(ErrorMessage = "El {0} es requerido")]
         [StringLength(maximumLength:30)]
         [Display(Name = "Nombre Cuenta")] 
+      
         public string Nombre { get; set; }
 
         [Display(Name = "Tipo de Cuenta")]
@@ -18,7 +18,7 @@ namespace PracticeAngular.Models
         public decimal Balance { get; set; }
 
 
-      
+        public string TipoCuenta { get; set; }  
         public string Descripcion { get; set; }
     }
 }

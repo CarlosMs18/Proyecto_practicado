@@ -1,0 +1,28 @@
+﻿@model IEnumerable<Categoria>
+
+@{
+    ViewData["Title"] = "Indice de Categoria";
+}
+
+
+<h1 class="display-4">Categoria</h1>
+<p>La categoria nospermite indicar en que gastamos nuestro dinero, tambien de donde provienen nuestros ingresos.</p>
+
+<a class="btn btn-primary" asp-action="Crear">Crear Nuevo</a>
+
+<table class="table mt-5">
+    <thead>
+        <tr>
+            <th>Acciones</th>
+            <th>Nombre</th>
+            <th>Tipo</th>
+        </tr>
+      
+    </thead>
+    <tbody>
+        @foreach (var categoria in Model)
+        {
+            
+        }
+    </tbody>
+</table>

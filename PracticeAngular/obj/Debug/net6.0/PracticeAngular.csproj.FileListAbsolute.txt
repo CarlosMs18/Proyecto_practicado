@@ -132,3 +132,6 @@ C:\Users\Tinnova1\source\repos\PracticeAngular\PracticeAngular\bin\Debug\net6.0\
 C:\Users\Tinnova1\source\repos\PracticeAngular\PracticeAngular\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.Security.Cryptography.ProtectedData.dll
 C:\Users\Tinnova1\source\repos\PracticeAngular\PracticeAngular\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
 C:\Users\Tinnova1\source\repos\PracticeAngular\PracticeAngular\obj\Debug\net6.0\PracticeAngular.csproj.CopyComplete
+C:\Users\jazmi\Source\Repos\Proyecto_practicado\PracticeAngular\obj\Debug\net6.0\scopedcss\Views\Cuentas\Index.cshtml.rz.scp.css
+C:\Users\jazmi\source\repos\Proyecto_practicado\PracticeAngular\bin\Debug\net6.0\AutoMapper.dll
+C:\Users\jazmi\source\repos\Proyecto_practicado\PracticeAngular\bin\Debug\net6.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
