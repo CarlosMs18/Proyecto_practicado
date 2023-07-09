@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\jazmi\\source\\repos\\Proyecto_practicado\\PracticeAngular\\PracticeAngular.csproj": {}
+    "C:\\Users\\usuario\\source\\repos\\Proyecto_practicado\\PracticeAngular\\PracticeAngular.csproj": {}
   },
   "projects": {
-    "C:\\Users\\jazmi\\source\\repos\\Proyecto_practicado\\PracticeAngular\\PracticeAngular.csproj": {
+    "C:\\Users\\usuario\\source\\repos\\Proyecto_practicado\\PracticeAngular\\PracticeAngular.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\jazmi\\source\\repos\\Proyecto_practicado\\PracticeAngular\\PracticeAngular.csproj",
+        "projectUniqueName": "C:\\Users\\usuario\\source\\repos\\Proyecto_practicado\\PracticeAngular\\PracticeAngular.csproj",
         "projectName": "PracticeAngular",
-        "projectPath": "C:\\Users\\jazmi\\source\\repos\\Proyecto_practicado\\PracticeAngular\\PracticeAngular.csproj",
-        "packagesPath": "C:\\Users\\jazmi\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\jazmi\\source\\repos\\Proyecto_practicado\\PracticeAngular\\obj\\",
+        "projectPath": "C:\\Users\\usuario\\source\\repos\\Proyecto_practicado\\PracticeAngular\\PracticeAngular.csproj",
+        "packagesPath": "C:\\Users\\usuario\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\usuario\\source\\repos\\Proyecto_practicado\\PracticeAngular\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\jazmi\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\usuario\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [

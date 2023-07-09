@@ -1,0 +1,29 @@
+﻿@model Categoria;
+@{
+    ViewData["Title"] = "Editar Categoria";
+}
+
+<h1 class="display-4">Editar Categoria</h1>
+<p>La categoria nos indica en que gastamos nuestro dinero, tambien de donde provienen nuestros ingresos</p>
+
+
+<div asp-validation-summary="ModelOnly" class="text-danger"></div>
+<form asp-action="Editar">
+    <div class="mt-3">
+        <label asp-for="Nombre" class="form-label"></label>
+        <input asp-for="Nombre" class="form-control" />
+        <span asp-validation-for="Nombre" class="text-danger"></span>
+    </div>
+
+
+    <div class="mt-3">
+        <label asp-for="TipoOperacionId" class="form-label"></label>
+        <select asp-for="TipoOperacionId" asp-items="Html.GetEnumSelectList<TipoOperacionEnum>()" class="form-select"></select>
+        <span asp-validation-for="TipoOperacionId" class="text-danger"></span>
+    </div>
+
+    <div class="mt-3">
+        <button class="btn btn-primary">Editar</button>
+        <a class="btn btn-danger" asp-action="Index">Cancelar</a>
+    </div>
+</form>
