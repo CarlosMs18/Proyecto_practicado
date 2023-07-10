@@ -11,6 +11,7 @@ namespace PracticeAngular.Servicios
         Task Crear(Transaccion transaccion);
         Task<IEnumerable<Transaccion>> ObtenerPorCuentaId(ObtenerTransaccionesPorCuenta modelo);
         Task<Transaccion> ObtenerPorId(int id, int usuarioId);
+        Task<IEnumerable<Transaccion>> ObtenerPorUsuarioId(ParametroObtenerTransaccionesPorUsuario modelo);
     }
 
     public class RepositorioTransacciones : IRepositorioTransacciones
@@ -78,14 +79,32 @@ namespace PracticeAngular.Servicios
             return await connection.QueryAsync<Transaccion>(
                 @"SELECT t.Id, t.Monto, T.FechaTransaccion, c.Nombre as Categoria, 
                 cu.Nombre as Cuenta, c.TipoOperacionId
-                FROM Transacciones t
+                FROM Transacciones t   
                 JOIN Categorias c
-                ON c.Id = T.CategoriaId
+                ON c.Id = T.CategoryId
                 JOIN Cuentas cu
-                ON cu.Id = T.CuentasId
-                WHERE t.CuentasId = @CuentasId AND T.UsuarioId = @UsuarioId AND FechaTransaccion BETWEEN @FechaInicio AND @FechaFin;",
+                ON cu.Id = T.CuentaId
+                WHERE t.CuentaId = @CuentaId AND T.UsuarioId = @UsuarioId AND FechaTransaccion BETWEEN @FechaInicio AND @FechaFin;",
                 modelo );
         }
+
+
+        public async Task<IEnumerable<Transaccion>> ObtenerPorUsuarioId(ParametroObtenerTransaccionesPorUsuario modelo)
+        {
+            using var connection = new SqlConnection(connectionString);
+            return await connection.QueryAsync<Transaccion>(
+                @"SELECT t.Id, t.Monto, T.FechaTransaccion, c.Nombre as Categoria, 
+                cu.Nombre as Cuenta, c.TipoOperacionId
+                FROM Transacciones t   
+                JOIN Categorias c
+                ON c.Id = T.CategoryId
+                JOIN Cuentas cu
+                ON cu.Id = T.CuentaId
+                WHERE  T.UsuarioId = @UsuarioId AND FechaTransaccion BETWEEN @FechaInicio AND @FechaFin
+                ORDER BY T.FechaTransaccion DESC;",
+                modelo);
+        }
+
 
 
         public async Task Borrar(int id)

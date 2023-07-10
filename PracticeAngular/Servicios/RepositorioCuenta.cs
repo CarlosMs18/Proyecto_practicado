@@ -49,7 +49,7 @@ namespace PracticeAngular.Servicios
         public async Task<Cuenta> ObtenerCuentaPorId(int id, int usuarioId)
         {
             using var connection = new SqlConnection(connectionString);
-            return await connection.QueryFirstOrDefaultAsync<Cuenta>(@"SELECT c.Id , c.Nombre, c.Balance, c.Descripcion, tc.Nombre as TipoCuenta 
+            return await connection.QueryFirstOrDefaultAsync<Cuenta>(@"SELECT c.Id , c.Nombre, c.Balance, c.Descripcion, TipoCuentaId 
                                                                     FROM Cuentas c
                                                                     JOIN TiposCuenta tc
                                                                     ON tc.Id = c.TipoCuentaId
