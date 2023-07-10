@@ -9,6 +9,7 @@ namespace PracticeAngular.Servicios
         Task Actualizar(Transaccion transaccion, decimal montoAnterior, int cuentaAnteriorId);
         Task Borrar(int id);
         Task Crear(Transaccion transaccion);
+        Task<IEnumerable<Transaccion>> ObtenerPorCuentaId(ObtenerTransaccionesPorCuenta modelo);
         Task<Transaccion> ObtenerPorId(int id, int usuarioId);
     }
 
@@ -69,6 +70,23 @@ namespace PracticeAngular.Servicios
                 WHERE Transacciones.Id =@Id AND Transacciones.UsuarioId = @UsuarioId;", new { id, usuarioId });
 
         }
+
+
+        public async Task<IEnumerable<Transaccion>> ObtenerPorCuentaId(ObtenerTransaccionesPorCuenta modelo)
+        {
+            using var connection = new SqlConnection(connectionString);
+            return await connection.QueryAsync<Transaccion>(
+                @"SELECT t.Id, t.Monto, T.FechaTransaccion, c.Nombre as Categoria, 
+                cu.Nombre as Cuenta, c.TipoOperacionId
+                FROM Transacciones t
+                JOIN Categorias c
+                ON c.Id = T.CategoriaId
+                JOIN Cuentas cu
+                ON cu.Id = T.CuentasId
+                WHERE t.CuentasId = @CuentasId AND T.UsuarioId = @UsuarioId AND FechaTransaccion BETWEEN @FechaInicio AND @FechaFin;",
+                modelo );
+        }
+
 
         public async Task Borrar(int id)
         {

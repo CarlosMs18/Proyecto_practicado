@@ -29,5 +29,9 @@ namespace PracticeAngular.Models
         [Display(Name = "Tipo de Operación")]
 
         public TipoOperacionEnum TipoOperacionId { get; set; } = TipoOperacionEnum.Ingreso;
+
+        public string Cuenta { get; set; }  
+
+        public string Categoria { get; set; }
     }
 }
